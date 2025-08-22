@@ -25,5 +25,23 @@ class ReturnBook extends Model
         ];
     }
 
+    public function loan()
+    {
+        return $this->belongsTo(Loan::class);
+    }
 
+    public function book()
+    {
+        return $this->belongsTo(Book::class);
+    }
+
+    public function fine()
+    {
+        return $this->hasOne(Fine::class);
+    }
+
+    public function returnBookCheck()
+    {
+        return $this->hasOne(ReturnBookCheck::class);
+    }
 }

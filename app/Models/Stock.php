@@ -14,4 +14,10 @@ class Stock extends Model
         'lost',
         'damaged'
     ];
+
+
+    public function book()
+    {
+        return $this->belongsTo(Book::class);
+    }
 }
